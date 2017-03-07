@@ -1,0 +1,33 @@
+{
+    "globals": {
+        "jQuery": true,
+        "Backbone": true,
+        "_": true,
+        "$": true,
+        "MD5": true,
+        "casper": true,
+        "console": true,
+        "require": true,
+        "module": true,
+        "sinon": true
+    },
+
+    "bitwise" : true,
+    "boss" : true,
+    "browser" : true,
+    "eqeqeq": true,
+    "eqnull": true,
+    "immed": true,
+    "indent": 4,
+    "latedef": true,
+    "laxcomma": true,
+    "maxdepth": 3,
+    "newcap": true,
+    "noarg": true,
+    "noempty": true,
+    "sub": true,
+    "trailing": true,
+    "undef": true,
+    "unused": true,
+    "white": false
+}

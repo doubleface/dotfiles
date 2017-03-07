@@ -1,0 +1,124 @@
+#!/usr/bin/env bash
+# Usage: envdev make [profilename]
+# Summary: put the specified profile in home
+# Help: If no profile is specified, the last which was applied is used
+
+set -e
+
+cd $_ENVDEV_ROOT
+CURRENT_PROFILE_FILE=$_ENVDEV_ROOT/share/current_profile
+MAKE_FILE_LIST=$_ENVDEV_ROOT/share/make_file_list
+
+###### ARGUMENTS HANDLING
+
+# Provide envdev completions for profiles
+if [ "$1" = "--complete" ]; then
+    ls $(hg root)/profiles
+    echo "--current"
+    echo "--files"
+    exit
+fi
+
+DEFAULT_PROFILE=""
+if [ -e $CURRENT_PROFILE_FILE ]; then
+    DEFAULT_PROFILE=$(cat $CURRENT_PROFILE_FILE)
+fi
+
+# only display the default profile
+if [ "$1" = "--current" ]; then
+    echo "Current profile is $DEFAULT_PROFILE"
+    exit
+fi
+
+# get the list of handled files
+if [ "$1" = "--files" ]; then
+    echo "List of files:"
+    cat $MAKE_FILE_LIST
+    exit
+fi
+
+# use applied profile if none specified
+PROFILE=$1
+if [ "$PROFILE" = "" ]; then
+    PROFILE=$DEFAULT_PROFILE
+    echo "Current profile is $PROFILE"
+fi
+
+###### END ARGUMENTS HANDLING
+
+rm -f $MAKE_FILE_LIST
+
+# create links to specified files in $HOME
+create_links() {
+    for file in $*; do
+        ln -vfs $(hg root)/$file $HOME/$(basename $file)
+        echo "$HOME/$(basename $file)" >> $MAKE_FILE_LIST
+    done
+}
+
+# create links for files in the profile path
+create_profile_links() {
+    prefixed=()
+    for file in $*; do
+        prefixed+=(profiles/$PROFILE/$file)
+    done
+    create_links ${prefixed[*]}
+}
+
+############# PROFILES
+
+# common profile used everywhere it is possible
+profile_common() {
+    create_links .inputrc .tmux.conf .gitconfig
+    mkdir -vp $HOME/.vimtrashfiles/backupfiles $HOME/.vimtrashfiles/undofiles $HOME/.vimtrashfiles/sessions
+    ln -vfs $(hg root)/vim_local $HOME/.vim
+}
+
+profile_p25dev() {
+    # my p25 dev virtual machine
+    # dependances phpcs (with pear + phpcs config-set default_standard standard) jshint (with node)
+    profile_common
+    create_profile_links .bashrc_perso .vimrc_perso .hgrc_perso .jshintrc .backup.lst
+}
+profile_mcpttdev() {
+    # my mcptt dev virtual machine
+    profile_common
+    create_links .vimrc
+    create_profile_links .bashrc_perso .vimrc_perso .hgrc_perso .jshintrc .backup.lst
+}
+profile_archlinux() {
+    # my archlinux laptop
+    profile_common
+    mkdir -vp $HOME/.i3
+    create_profile_links .bash_perso .vimrc_perso .xinitrc .i3status.conf
+    ln -vfs $(hg root)/profiles/$PROFILE/.i3/config $HOME/.i3/config
+    touch $HOME/.hgrc_perso;
+}
+profile_home() {
+    # the ubuntu station from home
+    profile_common
+    create_links .vimrc .hgrc .bashrc
+    create_profile_links .bash_perso .vimrc_perso .jshintrc
+}
+profile_light() {
+    # the ubuntu station from home
+    profile_common
+    create_links .vimrc .hgrc .bashrc
+    create_profile_links .bash_perso .vimrc_perso
+}
+profile_sun() {
+    # the ubuntu station from home
+    profile_common
+    create_profile_links .bash_perso .vimrc_perso
+    touch $HOME/.hgrc_perso
+    ln -vfs /opt/rational/clearcase/bin/cleartool $HOME/local/bin/ct
+    ln -vfs /home/mdbadm/outils/outils_swd/sv $HOME/local/bin/sv
+}
+
+############# END PROFILES
+
+# run the corresponding profile function
+profile_$PROFILE
+echo "$PROFILE" > $CURRENT_PROFILE_FILE
+echo "Now current profile is $PROFILE"
+

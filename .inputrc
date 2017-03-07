@@ -1,0 +1,10 @@
+$include /etc/inputrc
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+#set editing-mode vi
+#set keymap vi
+set show-all-if-ambiguous On
+set completion-ignore-case On
+set completion-map-case On
+
