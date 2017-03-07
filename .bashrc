@@ -20,7 +20,6 @@ fi
 
 export EDITOR="vim"
 export PAGER="less"
-export HG=`which hg`
 
 alias l='ls -CF'
 alias ll="ls -Flh --group-directories-first"
@@ -31,12 +30,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias sgvim="gvim --remote-silent-tab"
-
-# directly go to the root of the  hg repository
-function hgroot {
-    cd $(hg root)
-}
 
 shopt -s histverify
 
@@ -46,8 +39,6 @@ case "$TERM" in
 esac
 
 export GIT_PS1_SHOWDIRTYSTATE=1 GIT_PS1_SHOWSTASHSTATE=1 GIT_PS1_SHOWUNTRACKEDFILES=1
-
-PS1='\w`hg prompt "[{branch|quiet}{status}{update}{+{patch}}{@{bookmark}}]" 2>/dev/null`\$ '
 
 # git prompt
 #PS1='\w$(__git_ps1 " (%s)")\$ '

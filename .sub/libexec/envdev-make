@@ -74,26 +74,6 @@ profile_common() {
     ln -vfs $(hg root)/vim_local $HOME/.vim
 }
 
-profile_p25dev() {
-    # my p25 dev virtual machine
-    # dependances phpcs (with pear + phpcs config-set default_standard standard) jshint (with node)
-    profile_common
-    create_profile_links .bashrc_perso .vimrc_perso .hgrc_perso .jshintrc .backup.lst
-}
-profile_mcpttdev() {
-    # my mcptt dev virtual machine
-    profile_common
-    create_links .vimrc
-    create_profile_links .bashrc_perso .vimrc_perso .hgrc_perso .jshintrc .backup.lst
-}
-profile_archlinux() {
-    # my archlinux laptop
-    profile_common
-    mkdir -vp $HOME/.i3
-    create_profile_links .bash_perso .vimrc_perso .xinitrc .i3status.conf
-    ln -vfs $(hg root)/profiles/$PROFILE/.i3/config $HOME/.i3/config
-    touch $HOME/.hgrc_perso;
-}
 profile_home() {
     # the ubuntu station from home
     profile_common
@@ -103,16 +83,8 @@ profile_home() {
 profile_light() {
     # the ubuntu station from home
     profile_common
-    create_links .vimrc .hgrc .bashrc
+    create_links .vimrc .bashrc
     create_profile_links .bash_perso .vimrc_perso
-}
-profile_sun() {
-    # the ubuntu station from home
-    profile_common
-    create_profile_links .bash_perso .vimrc_perso
-    touch $HOME/.hgrc_perso
-    ln -vfs /opt/rational/clearcase/bin/cleartool $HOME/local/bin/ct
-    ln -vfs /home/mdbadm/outils/outils_swd/sv $HOME/local/bin/sv
 }
 
 ############# END PROFILES
