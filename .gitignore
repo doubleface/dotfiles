@@ -1,6 +1,2 @@
-vim_local/doc/tags
-vim_local/.netrwhist
-vim_local/tags
 *.swp
-*.pyc
-.sub/share
+vim_local/.netrwhist

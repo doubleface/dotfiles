@@ -29,3 +29,5 @@
     unstage = reset HEAD --
     gl = log --decorate --graph --all --oneline
 
+[status]
+	submoduleSummary = true
