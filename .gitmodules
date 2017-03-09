@@ -7,3 +7,6 @@
 [submodule "vim_local/bundle/sahara"]
 	path = vim_local/bundle/sahara
 	url = https://sanctum.geek.nz/code/sahara.git
+[submodule "vim_local/bundle/surround"]
+	path = vim_local/bundle/surround
+	url = https://github.com/tpope/vim-surround.git
