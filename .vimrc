@@ -191,6 +191,12 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_banner = 0
 
+" Syntastic
+let g:syntastic_enable_signs = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_javascript_checkers = ["standard"]
+
+
 " }}}
 
 source ~/.vimrc_perso
