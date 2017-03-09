@@ -1,0 +1,22 @@
+[defaults]
+st = -SC
+
+[ui]
+username = Christophe Thiriot
+editor = vim
+
+[extensions]
+graphlog =
+color =
+progress =
+purge =
+rebase =
+record =
+pager =
+shelve =
+
+[pager]
+pager = LESS='FSRX' less
+
+[diff]
+git = True
