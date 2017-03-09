@@ -10,3 +10,6 @@
 [submodule "vim_local/bundle/surround"]
 	path = vim_local/bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "vim_local/bundle/vim-sensible"]
+	path = vim_local/bundle/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git
