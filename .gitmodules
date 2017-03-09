@@ -13,3 +13,6 @@
 [submodule "vim_local/bundle/vim-sensible"]
 	path = vim_local/bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
+[submodule "vim_local/bundle/vinegar"]
+	path = vim_local/bundle/vinegar
+	url = https://github.com/tpope/vim-vinegar.git
