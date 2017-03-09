@@ -19,3 +19,6 @@
 [submodule "vim_local/bundle/eunuch"]
 	path = vim_local/bundle/eunuch
 	url = https://github.com/tpope/vim-eunuch.git
+[submodule "vim_local/bundle/yajs"]
+	path = vim_local/bundle/yajs
+	url = https://github.com/othree/yajs.vim.git
