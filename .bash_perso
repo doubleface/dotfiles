@@ -2,6 +2,20 @@
 
 export GIT_PS1_SHOWDIRTYSTATE=1 GIT_PS1_SHOWSTASHSTATE=1 GIT_PS1_SHOWUNTRACKEDFILES=1
 
+# NODE
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+nvm use stable
+
+. <(npm completion)
+
+# Only load liquidprompt in interactive shells, not from a script or from scp
+echo $- | grep -q i 2>/dev/null && . /usr/share/liquidprompt/liquidprompt
+
+# use HUB
+alias git=hub
+
 # ssh agent
 if [ -z "$SSH_AUTH_SOCK" ] ; then
     eval `ssh-agent -s`
