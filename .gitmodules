@@ -31,3 +31,6 @@
 [submodule "vim_local/bundle/syntastic"]
 	path = vim_local/bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "vim_local/bundle/airline"]
+	path = vim_local/bundle/airline
+	url = https://github.com/vim-airline/vim-airline.git

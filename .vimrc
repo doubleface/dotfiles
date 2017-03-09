@@ -196,6 +196,15 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ["standard"]
 
+" Airline
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '~'
+
+
 
 " }}}
 
