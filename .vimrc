@@ -1,4 +1,6 @@
-" GENERAL OPTIONS -------------------------- {{{
+runtime bundle/pathogen/autoload/pathogen.vim
+
+" GENERAL OPTIONS in addition to vim-sensible -------- {{{
 filetype off
 call pathogen#infect()
 set nocompatible
@@ -22,8 +24,6 @@ set softtabstop=4
 set expandtab
 set scrolljump=5                        " Windows scrolling 5 lines with the cursor
 set so=5                                " Set 5 lines to the curors - when moving vertical
-set guioptions-=m                       " removes the menu bar
-set guioptions-=T                       " removes toolbar
 set switchbuf=useopen,usetab,newtab
 set clipboard=unnamed
 
@@ -78,8 +78,6 @@ augroup END
 " MAPPINGS ----------------------------------------- {{{
 let mapleader = "ù"
 let g:mapleader = "ù"
-let maplocalleader = "="
-let g:maplocalleader = "="
 map <leader>ed :e! $HOME/.vimrc<cr>
 map <leader>sed :source $HOME/.vimrc<cr>
 nmap <silent> <leader>n :Vex<cr>
@@ -98,7 +96,7 @@ vnoremap L $
 nnoremap H ^
 vnoremap H ^
 
-" just to try it jj is not used a lot in insertion mode and <ESC> key is so far away...
+" ESC is too far
 inoremap jk <ESC>
 
 " <C-]> is hard to reach on french keyboard
@@ -129,24 +127,10 @@ nnoremap <silent> gb :bnext<CR>
 nnoremap <silent> gB :bprevious<CR>
 nnoremap <silent> <leader><tab> :b #<CR>
 
-" Show all open buffers and their status
-nnoremap <silent> (q :cprevious<CR>
-nnoremap <silent> )q :cnext<CR>
-nnoremap <silent> (a :previous<CR>
-nnoremap <silent> )a :next<CR>
-nnoremap <silent> (A :first<CR>
-nnoremap <silent> )A :last<CR>
-nnoremap <silent> (t :tprevious<CR>
-nnoremap <silent> )t :tnext<CR>
-nnoremap <silent> (T :tfirst<CR>
-nnoremap <silent> )T :tlast<CR>
-
 " ` is hard to reach and is always better than '
 nnoremap ' `
 
 " }}}
-
-
 
 " FILE SETTINGS ------------------------------- {{{
 " html file settings ------------------------- {{{
@@ -184,37 +168,29 @@ augroup filetype_javascript
 augroup END
 " }}}
 
+" STATUSLINE AND TITLE STRING--------------------------- {{{
+set statusline=CWD:\%r%{getcwd()}%h                                  " current working directory
+set statusline+=\                                                    " space
+set statusline+=%m%r%h%w                                             " file is modified, no modifiable etc
+set statusline+=%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']['.&ft.']'}  " evaluation with encoding, file format and file type
+set statusline+=\                                                    " space
+set statusline+=%.100f                                                " Current file full path restricted to n chars
+set statusline+=%=                                                   " spacer
+set statusline+=%l/%L:%c                                             " line counts
+
+set title
+set titlestring=VIM:\ %-25.55F
+set titlelen=140
+set titleold=
 " }}}
 
 " PLUGINS -------------------------------------- {{{
-" Syntastic
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_javascript_checkers = ["eslint"]
 
 " Netrw
 let g:netrw_winsize = 20
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_banner = 0
-
-" Airline
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-let g:airline_left_sep = '»'
-let g:airline_right_sep = '«'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '~'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.whitespace = 'Ξ'
-" enable/disable displaying buffers with a single tab. >
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 1
-let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline#extensions#tabline#fnamemod = ':t'
 
 " }}}
 
