@@ -16,3 +16,6 @@
 [submodule "vim_local/bundle/vinegar"]
 	path = vim_local/bundle/vinegar
 	url = https://github.com/tpope/vim-vinegar.git
+[submodule "vim_local/bundle/eunuch"]
+	path = vim_local/bundle/eunuch
+	url = https://github.com/tpope/vim-eunuch.git
