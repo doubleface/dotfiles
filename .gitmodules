@@ -22,3 +22,6 @@
 [submodule "vim_local/bundle/yajs"]
 	path = vim_local/bundle/yajs
 	url = https://github.com/othree/yajs.vim.git
+[submodule "vim_local/bundle/commentary"]
+	path = vim_local/bundle/commentary
+	url = https://github.com/tpope/vim-commentary.git
