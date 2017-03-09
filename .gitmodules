@@ -43,3 +43,6 @@
 [submodule "vim_local/bundle/multiple-cursor"]
 	path = vim_local/bundle/multiple-cursor
 	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "vim_local/bundle/node"]
+	path = vim_local/bundle/node
+	url = https://github.com/moll/vim-node.git
