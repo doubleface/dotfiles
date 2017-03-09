@@ -5,7 +5,6 @@ filetype off
 call pathogen#infect()
 set nocompatible
 
-set showcmd                             " display incomplete commands
 set completeopt=longest,menuone,preview " set completion mode for <c-n> and <c-p>
 set hlsearch                            " highlight search results
 set ignorecase                          " ignore case by default in searches
@@ -80,7 +79,7 @@ let mapleader = "ù"
 let g:mapleader = "ù"
 map <leader>ed :e! $HOME/.vimrc<cr>
 map <leader>sed :source $HOME/.vimrc<cr>
-nmap <silent> <leader>n :Vex<cr>
+nmap <silent> - :Vex<cr>
 nmap <silent> <leader>q <C-w>h:q<cr>
 
 " give to Y the same behavior as D
