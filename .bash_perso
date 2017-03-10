@@ -23,4 +23,4 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
 fi
 
 # change lang for cli, especially better for vim-fugitive
-export LANG=en_US
+export LANG=en_US.UTF-8
