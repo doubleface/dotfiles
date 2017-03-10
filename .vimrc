@@ -204,7 +204,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '~'
 
-
+" Fugitive
+let g:fugitive_git_executable = 'LANG=en git'
 
 " }}}
 
