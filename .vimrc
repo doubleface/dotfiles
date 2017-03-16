@@ -25,6 +25,7 @@ set scrolljump=5                        " Windows scrolling 5 lines with the cur
 set so=5                                " Set 5 lines to the curors - when moving vertical
 set switchbuf=useopen,usetab,newtab
 set clipboard=unnamed
+set diffopt+=vertical
 
 "Turn on Wild menu
 set wildmode=full
