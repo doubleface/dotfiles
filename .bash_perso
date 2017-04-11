@@ -16,6 +16,9 @@ echo $- | grep -q i 2>/dev/null && . /usr/share/liquidprompt/liquidprompt
 
 # use HUB and make it work with vim-fugitive
 alias git=hub
+# GO
+export GOPATH="$HOME/Workspace/go"
+export PATH="$PATH:$GOPATH/bin"
 
 # ssh agent
 if [ -z "$SSH_AUTH_SOCK" ] ; then
