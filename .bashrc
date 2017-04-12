@@ -5,11 +5,15 @@ export HISTCONTROL=ignoreboth # ignore same sucessive entries.
 export HISTFILESIZE=3000 # the bash history should save 3000 commands
 shopt -s checkwinsize
 shopt -s histappend
+shopt -s histreedit
+shopt -s histverify
+shopt -s globstar
 
 # files inclusion
 . ~/.bash_perso
 
 PROMPT_DIRTRIM=2
+PROMPT_COMMAND="history -a;history -c;history -r; $PROMPT_COMMAND"
 
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then
@@ -30,9 +34,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-
-shopt -s histverify
-shopt -s globstar
 
 # If we're using an xterm, force 256 colors.
 case "$TERM" in
