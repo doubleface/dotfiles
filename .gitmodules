@@ -46,3 +46,6 @@
 [submodule "vim_local/bundle/node"]
 	path = vim_local/bundle/node
 	url = https://github.com/moll/vim-node.git
+[submodule "vim_local/bundle/fakeclip"]
+	path = vim_local/bundle/fakeclip
+	url = git@github.com:kana/vim-fakeclip.git
