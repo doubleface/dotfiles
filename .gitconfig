@@ -27,11 +27,11 @@
     co = checkout
     st = status
     dif = diff
-    unstage = reset HEAD --
-    gl = log --decorate --graph --all --oneline
-    diffwords = diff --word-diff=color --word-diff-regex=.
+    gl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    glf = log --decorate --graph --all --pretty=medium --relative-date
+    diffwords = diff --word-diff=color
     clean = clean -i
-    tidy = rebase -i @{upstream}..
+    purge = clean -dxi
 
 [status]
     submoduleSummary = true
