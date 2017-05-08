@@ -27,7 +27,7 @@
     co = checkout
     st = status
     dif = diff
-    gl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    gl = log --decorate --graph --all --oneline
     glf = log --decorate --graph --all --pretty=medium --relative-date
     diffwords = diff --word-diff=color
     clean = clean -i
