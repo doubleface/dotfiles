@@ -32,6 +32,8 @@
     diffwords = diff --word-diff=color
     clean = clean -i
     purge = clean -dxi
+    showfiles = show --name-status
+    fixup = !sh -c 'SHA=$(git rev-parse $1) && git commit --fixup $SHA && git rebase -i --autosquash $SHA~' -
 
 [status]
     submoduleSummary = true
