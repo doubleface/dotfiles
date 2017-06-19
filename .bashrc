@@ -2,7 +2,7 @@
 [ -z "$PS1" ] && return
 
 export HISTCONTROL=ignoreboth # ignore same sucessive entries.
-export HISTFILESIZE=3000 # the bash history should save 3000 commands
+export HISTFILESIZE=10000 # the bash history should save 3000 commands
 shopt -s checkwinsize
 shopt -s histappend
 shopt -s histreedit
