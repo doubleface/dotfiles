@@ -207,6 +207,7 @@ let g:airline_symbols.branch = '~'
 
 " Fugitive
 let g:fugitive_git_executable = 'LANG=en git'
+autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " }}}
 
