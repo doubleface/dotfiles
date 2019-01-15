@@ -43,7 +43,7 @@
 [pull]
     rebase = preserve
 [push]
-    default = simple
+    default = current
     followTags = true
 [diff]
 	tool = vimdiff
