@@ -197,7 +197,13 @@ let g:netrw_banner = 0
 " Syntastic
 let g:syntastic_enable_signs = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_javascript_checkers = ["standard"]
+let g:syntastic_javascript_checkers = ["eslint"]
+
+" autofix with eslint
+let g:syntastic_javascript_eslint_args = ['--fix']
+function! SyntasticCheckHook(errors)
+  checktime
+endfunction
 
 " Airline
 if !exists('g:airline_symbols')
