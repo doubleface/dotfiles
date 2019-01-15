@@ -14,6 +14,7 @@ ln -vfs $ROOTPATH/.tmux.conf
 ln -vfs $ROOTPATH/.vimrc
 ln -vfs $ROOTPATH/.vimrc_perso
 ln -vfs $ROOTPATH/vim_local
+ln -vfs $ROOTPATH/git-commit-template.txt
 rm -rf .vim
 mv -v vim_local .vim
 mkdir -p .vimtrashfiles/backupfiles
