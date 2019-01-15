@@ -1,6 +1,8 @@
 [user]
     name = doubleface
     email = christophe@cozycloud.cc
+[commit]
+    template = /home/doubleface/git-commit-template.txt
 [core]
     editor = vim
 [color]
