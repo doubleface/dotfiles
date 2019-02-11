@@ -22,7 +22,20 @@ function gitroot {
 function vimf {
     vim `git rev-parse --show-toplevel`/.git/index
 }
+
 alias git-clean-branches="git pull && git branch | cut -d' ' -f3 | xargs git branch -d"
+
+gpurge() {
+# Purge remote branches
+  git fetch --prune
+# Purge local branches not tracked on remote
+    git branch --merged | grep -v "\*" | grep -v "master" | xargs -n 1 git branch -d
+# Update tags
+    git tag | xargs git tag -d && git fetch --tags
+# GC
+    git prune
+    git gc
+}
 
 alias say='espeak -v fr'
 
