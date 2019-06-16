@@ -1,9 +1,6 @@
 [submodule "vim_local/bundle/pathogen"]
 	path = vim_local/bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "vim_local/bundle/editorconfig"]
-	path = vim_local/bundle/editorconfig
-	url = https://github.com/editorconfig/editorconfig-vim.git
 [submodule "vim_local/bundle/sahara"]
 	path = vim_local/bundle/sahara
 	url = https://sanctum.geek.nz/code/sahara.git
