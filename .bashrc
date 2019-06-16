@@ -39,3 +39,7 @@ alias .....="cd ../../../.."
 case "$TERM" in
     xterm*) TERM=xterm-256color;;
 esac
+export http_proxy=''
+export https_proxy=''
+export ftp_proxy=''
+export socks_proxy=''
