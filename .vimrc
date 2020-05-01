@@ -129,8 +129,12 @@ nnoremap <silent> <leader><tab> :b #<CR>
 " ` is hard to reach and is always better than '
 nnoremap ' `
 
-" get a diff from the original file of the current buffer (comes from vim doc
+" get a diff from the original file of the current buffer (comes from vim doc)
 command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
+
+" console.log abbreviation
+imap cll console.log('', )<Esc>==f(la
+vmap cll jkyocll<Esc>plllp
 
 " }}}
 
