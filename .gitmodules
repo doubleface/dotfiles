@@ -46,3 +46,6 @@
 [submodule "vim-fakeclip"]
 	path = vim_local/bundle/fakeclip
 	url = git@github.com:kana/vim-fakeclip.git
+[submodule "vim-editorconfig"]
+	path = vim_local/bundle/editorconfig
+	url = git@github.com:editorconfig/editorconfig-vim.git
