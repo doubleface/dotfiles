@@ -49,3 +49,6 @@
 [submodule "vim-editorconfig"]
 	path = vim_local/bundle/editorconfig
 	url = git@github.com:editorconfig/editorconfig-vim.git
+[submodule "vim-rhubarb"]
+	path = vim_local/bundle/rhubarb
+	url = https://github.com/tpope/vim-rhubarb.git
