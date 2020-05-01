@@ -40,10 +40,8 @@
 [status]
     submoduleSummary = true
     showUntrackedFiles = all
-[pull]
-    rebase = preserve
 [push]
     default = current
     followTags = true
 [diff]
-	tool = vimdiff
+	; tool = vimdiff
