@@ -43,3 +43,6 @@
 [submodule "vim_local/bundle/prettier"]
 	path = vim_local/bundle/prettier
 	url = git://github.com/prettier/vim-prettier.git
+[submodule "vim-fakeclip"]
+	path = vim_local/bundle/fakeclip
+	url = git@github.com:kana/vim-fakeclip.git
