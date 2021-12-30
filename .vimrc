@@ -17,9 +17,9 @@ set splitbelow
 set hidden                              " don't display buffers if they've been closed
 set mouse=a                             " have the mouse enabled all the time
 set visualbell                          "No sound on errors.
-set tabstop=4                           " Tabulations
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2                           " Tabulations
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set scrolljump=5                        " Windows scrolling 5 lines with the cursor
 set so=5                                " Set 5 lines to the curors - when moving vertical
@@ -128,9 +128,6 @@ nnoremap <silent> <leader><tab> :b #<CR>
 
 " ` is hard to reach and is always better than '
 nnoremap ' `
-
-" get a diff from the original file of the current buffer (comes from vim doc)
-command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
 
 " console.log abbreviation
 imap cll console.log('', )<Esc>==f(la
