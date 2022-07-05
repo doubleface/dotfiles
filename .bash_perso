@@ -22,6 +22,9 @@ function gitroot {
 function vimf {
     vim `git rev-parse --show-toplevel`/.git/index
 }
+function nvimf {
+    nvim `git rev-parse --show-toplevel`/.git/index
+}
 
 alias git-clean-branches="git pull && git branch | cut -d' ' -f3 | xargs git branch -d"
 
