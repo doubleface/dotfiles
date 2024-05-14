@@ -28,6 +28,7 @@
     dif = diff
     unstage = reset HEAD --
     gl = log --decorate --graph --all --oneline
+	push-with-lease = push --force-with-lease --force-if-includes
 
 [status]
 	submoduleSummary = true
