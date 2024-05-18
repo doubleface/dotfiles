@@ -44,9 +44,6 @@ alias say='espeak -v fr'
 export GOPATH="$HOME/Workspace/go"
 export PATH="$GOPATH/bin:$HOME/bin:$HOME/.local/bin:$HOME/Workspace/maintenance/:$HOME/Workspace/maintenance/cli/:$PATH"
 
-export SENTRY_TOKEN=`pass work/sentry-token`
-export COZY_COUCH_USER=`pass work/couch-user`
-export COZY_COUCH_PASSWORD=`pass work/couch-password`
 
 # ssh agent
 if [ -z "$SSH_AUTH_SOCK" ] ; then
