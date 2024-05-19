@@ -31,9 +31,6 @@
 [submodule "vim_local/bundle/gitgutter"]
 	path = vim_local/bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "vim_local/bundle/multiple-cursor"]
-	path = vim_local/bundle/multiple-cursor
-	url = https://github.com/terryma/vim-multiple-cursors.git
 [submodule "vim_local/bundle/node"]
 	path = vim_local/bundle/node
 	url = https://github.com/moll/vim-node.git
@@ -52,3 +49,6 @@
 [submodule "vim_local/bundle/vim-polyglot"]
 	path = vim_local/bundle/vim-polyglot
 	url = git@github.com:sheerun/vim-polyglot.git
+[submodule "vim_local/bundle/vim-visual-multi"]
+	path = vim_local/bundle/vim-visual-multi
+	url = https://github.com/mg979/vim-visual-multi
