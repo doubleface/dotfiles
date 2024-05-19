@@ -81,6 +81,8 @@ map <leader>ed :e! $HOME/.vimrc<cr>
 map <leader>sed :source $HOME/.vimrc<cr>
 nmap <silent> - :Vex<cr>
 nmap <silent> <leader>q <C-w>h:q<cr>
+nmap gd :ALEGoToDefinition<cr>
+nmap <leader>r :ALEFindReferences<cr>
 
 " give to Y the same behavior as D
 nnoremap Y y$
@@ -189,22 +191,20 @@ set titleold=
 
 " PLUGINS -------------------------------------- {{{
 
+" ALE
+let g:ale_fixers = {
+\   'javascript': ['eslint']
+\}
+let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+
 " Netrw
 let g:netrw_winsize = 20
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_banner = 0
-
-" Syntastic
-let g:syntastic_enable_signs = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_javascript_checkers = ["eslint"]
-
-" autofix with eslint
-let g:syntastic_javascript_eslint_args = ['--fix']
-function! SyntasticCheckHook(errors)
-  checktime
-endfunction
 
 " Airline
 if !exists('g:airline_symbols')

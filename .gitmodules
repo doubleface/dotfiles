@@ -22,9 +22,6 @@
 [submodule "vim_local/bundle/fugitive"]
 	path = vim_local/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim_local/bundle/syntastic"]
-	path = vim_local/bundle/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
 [submodule "vim_local/bundle/airline"]
 	path = vim_local/bundle/airline
 	url = https://github.com/vim-airline/vim-airline.git
@@ -52,3 +49,6 @@
 [submodule "vim_local/bundle/vim-visual-multi"]
 	path = vim_local/bundle/vim-visual-multi
 	url = https://github.com/mg979/vim-visual-multi
+[submodule "vim_local/bundle/ale"]
+	path = vim_local/bundle/ale
+	url = git@github.com:dense-analysis/ale.git
