@@ -16,9 +16,6 @@
 [submodule "vim_local/bundle/eunuch"]
 	path = vim_local/bundle/eunuch
 	url = https://github.com/tpope/vim-eunuch.git
-[submodule "vim_local/bundle/yajs"]
-	path = vim_local/bundle/yajs
-	url = https://github.com/othree/yajs.vim.git
 [submodule "vim_local/bundle/commentary"]
 	path = vim_local/bundle/commentary
 	url = https://github.com/tpope/vim-commentary.git
@@ -52,3 +49,6 @@
 [submodule "vim-rhubarb"]
 	path = vim_local/bundle/rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
+[submodule "vim_local/bundle/vim-polyglot"]
+	path = vim_local/bundle/vim-polyglot
+	url = git@github.com:sheerun/vim-polyglot.git
