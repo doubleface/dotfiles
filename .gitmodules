@@ -52,3 +52,9 @@
 [submodule "vim_local/bundle/ale"]
 	path = vim_local/bundle/ale
 	url = git@github.com:dense-analysis/ale.git
+[submodule "vim_local/bundle/fzf"]
+	path = vim_local/bundle/fzf
+	url = git@github.com:junegunn/fzf.git
+[submodule "vim_local/bundle/fzf.vim"]
+	path = vim_local/bundle/fzf.vim
+	url = git@github.com:junegunn/fzf.vim.git

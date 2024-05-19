@@ -83,6 +83,7 @@ nmap <silent> - :Vex<cr>
 nmap <silent> <leader>q <C-w>h:q<cr>
 nmap gd :ALEGoToDefinition<cr>
 nmap <leader>r :ALEFindReferences<cr>
+nmap <leader>f :Files<cr>
 
 " give to Y the same behavior as D
 nnoremap Y y$
