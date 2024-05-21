@@ -42,7 +42,7 @@ alias say='espeak -v fr'
 
 # GO
 export GOPATH="$HOME/Workspace/go"
-export PATH="$GOPATH/bin:$HOME/bin:$HOME/.local/bin:$HOME/Workspace/maintenance/:$HOME/Workspace/maintenance/cli/:$PATH"
+export PATH="$GOPATH/bin:$HOME/bin:$HOME/.local/bin:$HOME/Workspace/maintenance/:$HOME/Workspace/maintenance/cli/:$HOME/opt/jdk-11.0.23+9/bin/:$PATH"
 
 
 # ssh agent
@@ -51,3 +51,6 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
     ssh-add
 fi
 
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
